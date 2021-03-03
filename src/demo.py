@@ -5,8 +5,9 @@ from utils.utils import *
 import cv2
 
 # designate image path here
-IX_path = '../img/1a.jpg'
-IY_path = '../img/1b.jpg'
+img_path = 'E:\\Users\\Chase\\Documents\\source\\python_projects\\registration\\forest\\'
+IX_path = img_path + 'forest_20160217_L1A0001416073-GF2_PMS1_E116_r8c8_liner002.tif'
+IY_path = img_path + 'forest_20161228_L1A0002076029-GF2_PMS2_E115_r8c8_liner002.tif'
 
 IX = cv2.imread(IX_path)
 IY = cv2.imread(IY_path)

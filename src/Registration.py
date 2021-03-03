@@ -3,7 +3,8 @@ import time
 import gc
 
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from VGG16 import VGG16mo
 from utils.utils import *
 import cv2
@@ -29,6 +30,9 @@ class CNN(object):
         self.beta = 2.0
         self.lambd = 0.5
 
+        # tf.compat.v1.disable_eager_execution()
+        # self.cnnph = tf.compat.v1.placeholder("float", [2, 224, 224, 3])
+        tf.disable_v2_behavior()
         self.cnnph = tf.placeholder("float", [2, 224, 224, 3])
         self.vgg = VGG16mo()
         self.vgg.build(self.cnnph)
